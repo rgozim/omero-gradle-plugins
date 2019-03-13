@@ -8,6 +8,12 @@ plugins {
     id 'idea'
 }
 
+task publish {
+    group "omero"
+    description "Calls publish on all subprojects"
+    dependsOn gradle.includedBuilds*.task(':publish')
+}
+
 task publishToMavenLocal {
     group "omero"
     description "Calls publishToMavenLocal on all subprojects"
