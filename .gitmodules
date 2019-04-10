@@ -10,7 +10,11 @@
 [submodule "omero-artifact-plugin"]
 	path = omero-artifact-plugin
 	url = https://github.com/rgozim/omero-artifact-plugin.git
+[submodule "omero-javapackager-plugin"]
+    path = omero-javapackager-plugin
+    url = https://github.com/rgozim/omero-javapackager-plugin.git
 [submodule "ice-builder-gradle"]
 	path = ice-builder-gradle
 	url = https://github.com/rgozim/ice-builder-gradle.git
 	branch = master
+
