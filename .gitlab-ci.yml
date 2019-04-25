@@ -1,8 +1,5 @@
 image: gradle:5.4.0-jdk8
 
-variables:
-  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
-
 before_script:
   - apt-get update -qq && apt-get install -y -qq zeroc-ice-all-dev
   - export GRADLE_USER_HOME=`pwd`/.gradle
@@ -17,4 +14,5 @@ stages:
 
 publishToMavenLocal:
   stage: publishGitlab
-  script: gradle publish
+  script:
+  - gradle publish -s
