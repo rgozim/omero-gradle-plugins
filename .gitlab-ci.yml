@@ -1,4 +1,4 @@
-image: gradle:5.2.1-jdk11
+image: gradle:5.4.0-jdk8
 
 variables:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
@@ -6,6 +6,11 @@ variables:
 before_script:
   - apt-get update -qq && apt-get install -y -qq zeroc-ice-all-dev
   - export GRADLE_USER_HOME=`pwd`/.gradle
+
+cache:
+  paths:
+    - .gradle/wrapper
+    - .gradle/caches
 
 stages:
   - publishGitlab
