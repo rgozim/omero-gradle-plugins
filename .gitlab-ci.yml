@@ -15,4 +15,5 @@ stages:
 publishToMavenLocal:
   stage: publishGitlab
   script:
-  - gradle publish -s
+    - env
+    - gradle publish -i
