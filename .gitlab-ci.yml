@@ -17,14 +17,13 @@ build:
   stage: build
   script:
     - gradle assemble -i
+  cache:
+    paths:
+      - "**/build/"
+
   artifacts:
     paths:
-      - ice-builder-gradle/build/libs/slice-1.5.0-SNAPSHOT.jar
-      - omero-api-plugin/build/libs/omero-api-plugin-5.5.0-SNAPSHOT.jar
-      - omero-artifact-plugin/build/libs/omero-artifact-plugin-5.5.0-SNAPSHOT.jar
-      - omero-blitz-plugin/build/libs/omero-blitz-plugin-5.5.0-SNAPSHOT.jar
-      - omero-dsl-plugin/build/libs/omero-dsl-plugin-5.5.0-SNAPSHOT.jar
-      - omero-javapackager-plugin/build/libs/omero-javapackager-plugin-5.5.0-SNAPSHOT.jar
+      - "**/build/**/*.jar"
 
 publish:
   stage: publish
