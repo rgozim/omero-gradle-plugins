@@ -5,13 +5,19 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 plugins {
-    id 'idea'
+    id "idea"
 }
 
 task publish {
     group "omero"
     description "Calls publish on all subprojects"
     dependsOn gradle.includedBuilds*.task(':publish')
+}
+
+task publishToGitlab {
+    group "omero"
+    description "Calls publishAllPublicationsToGitlabRepository on all subprojects"
+    dependsOn gradle.includedBuilds*.task(':publishAllPublicationsToGitlabRepository')
 }
 
 task publishToMavenLocal {
@@ -24,6 +30,12 @@ task build {
     group "omero"
     description "Calls build on all subprojects"
     dependsOn gradle.includedBuilds*.task(':build')
+}
+
+task assemble {
+    group "omero"
+    description "Calls assemble on all subprojects"
+    dependsOn gradle.includedBuilds*.task(':assemble')
 }
 
 task clean {
