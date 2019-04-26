@@ -10,10 +10,25 @@ cache:
     - .gradle/caches
 
 stages:
-  - publishGitlab
+  - build
+  - publish
 
-publishToMavenLocal:
-  stage: publishGitlab
+build:
+  stage: build
+  script:
+    - gradle assemble -i
+  cache:
+    paths:
+      - "**/build/"
+
+  artifacts:
+    paths:
+      - "**/build/**/*.jar"
+
+publish:
+  stage: publish
   script:
     - env
-    - gradle publish -i
+    - gradle publishToGitlab -i
+  only:
+    - develop
