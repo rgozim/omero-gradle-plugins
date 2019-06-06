@@ -16,7 +16,7 @@ stages:
 build:
   stage: build
   script:
-    - gradle --build-cache assemble -i
+    - gradle assemble -i
   artifacts:
     paths:
       - "**/build/**/*.jar"
