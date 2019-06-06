@@ -2,7 +2,7 @@ image: gradle:5.4.1-jdk8
 
 before_script:
   - apt-get update -qq && apt-get install -y -qq zeroc-ice-all-dev
-  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
 
 cache:
   paths:
@@ -17,9 +17,6 @@ build:
   stage: build
   script:
     - gradle --build-cache assemble -i
-  cache:
-    paths:
-      - "**/build/"
   artifacts:
     paths:
       - "**/build/**/*.jar"
