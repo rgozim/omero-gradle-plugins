@@ -1,13 +1,9 @@
-image: gradle:5.4.1-jdk8
-
-before_script:
-  - apt-get update -qq && apt-get install -y -qq zeroc-ice-all-dev
-  - export GRADLE_USER_HOME=$CI_PROJECT_DIR/.gradle
+image: registry.gitlab.com/rgozim/docker-registry/gradle-ice36:5.4.1-jdk8
 
 cache:
   paths:
-    - .gradle/wrapper
-    - .gradle/caches
+    - .gradle/caches/
+    - build/
 
 stages:
   - build
@@ -16,15 +12,18 @@ stages:
 build:
   stage: build
   script:
-    - gradle assemble -i
+    - gradle build -i
   artifacts:
     paths:
       - "**/build/**/*.jar"
+  only:
+    refs:
+      - develop
 
 publish:
   stage: publish
   script:
-    - env
     - gradle publishToGitlab -i
   only:
-    - develop
+    refs:
+      - develop
