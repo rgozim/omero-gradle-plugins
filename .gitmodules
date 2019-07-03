@@ -1,3 +1,11 @@
+[submodule "omero-reckon-plugin"]
+	path = omero-reckon-plugin
+	url = https://github.com/rgozim/omero-reckon-plugin.git
+	branch = develop
+[submodule "omero-project-plugin"]
+	path = omero-project-plugin
+	url = https://github.com/rgozim/omero-project-plugin.git
+	branch = develop
 [submodule "omero-dsl-plugin"]
 	path = omero-dsl-plugin
 	url = https://github.com/rgozim/omero-dsl-plugin.git
@@ -22,4 +30,3 @@
 	path = ice-builder-gradle
 	url = https://github.com/rgozim/ice-builder-gradle.git
 	branch = develop
-
