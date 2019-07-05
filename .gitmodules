@@ -1,7 +1,7 @@
 [submodule "omero-reckon-plugin"]
 	path = omero-reckon-plugin
 	url = https://github.com/rgozim/omero-reckon-plugin.git
-	branch = develop
+	branch = omero
 [submodule "omero-project-plugin"]
 	path = omero-project-plugin
 	url = https://github.com/rgozim/omero-project-plugin.git
