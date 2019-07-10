@@ -3,7 +3,7 @@ image: registry.gitlab.com/rgozim/docker-registry/gradle-ice36:5.4.1-jdk8
 cache:
   paths:
     - build-cache/
-    - "**/.gradle/**/*"
+    - "**/.gradle"
     - "**/build"
 
 stages:
