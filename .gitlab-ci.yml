@@ -2,8 +2,9 @@ image: registry.gitlab.com/rgozim/docker-registry/gradle-ice36:5.4.1-jdk8
 
 cache:
   paths:
-    - .gradle/caches/
-    - build/
+    - build-cache/
+    - "**/.gradle/"
+    - "**/build/"
 
 stages:
   - build
@@ -12,7 +13,7 @@ stages:
 build:
   stage: build
   script:
-    - gradle build -i
+    - gradle -i -g /build-cache build
   artifacts:
     paths:
       - "**/build/**/*.jar"
@@ -23,7 +24,7 @@ build:
 publish:
   stage: publish
   script:
-    - gradle publishToGitlab -i
+    - gradle -i -g /build-cache publishToGitlab
   only:
     refs:
       - develop
