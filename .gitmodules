@@ -1,25 +1,32 @@
 [submodule "omero-dsl-plugin"]
 	path = omero-dsl-plugin
-	url = https://github.com/ome/omero-dsl-plugin
-	branch = master
+	url = https://github.com/rgozim/omero-dsl-plugin
+	branch = develop
 [submodule "omero-api-plugin"]
 	path = omero-api-plugin
-	url = https://github.com/ome/omero-api-plugin
-	branch = master
+	url = https://github.com/rgozim/omero-api-plugin
+	branch = develop
 [submodule "omero-blitz-plugin"]
 	path = omero-blitz-plugin
-	url = https://github.com/ome/omero-blitz-plugin
-	branch = master
+	url = https://github.com/rgozim/omero-blitz-plugin
+	branch = develop
 [submodule "omero-artifact-plugin"]
 	path = omero-artifact-plugin
-	url = https://github.com/ome/omero-artifact-plugin
-	branch = master
+	url = https://github.com/rgozim/omero-artifact-plugin
+	branch = develop
 [submodule "omero-javapackager-plugin"]
 	path = omero-javapackager-plugin
-	url = https://github.com/ome/omero-javapackager-plugin.git
-	branch = master
+	url = https://github.com/rgozim/omero-javapackager-plugin.git
+	branch = develop
 [submodule "ice-builder-gradle"]
 	path = ice-builder-gradle
-	url = https://github.com/ome/ice-builder-gradle
-	branch = master
-
+	url = https://github.com/rgozim/ice-builder-gradle
+	branch = develop
+[submodule "omero-project-plugin"]
+	path = omero-project-plugin
+	url = https://github.com/rgozim/omero-project-plugin.git
+	branch = develop
+[submodule "omero-release-plugin"]
+	path = omero-release-plugin
+	url = https://github.com/rgozim/omero-release-plugin.git
+	branch = develop
